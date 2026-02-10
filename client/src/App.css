@@ -1,0 +1,188 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Nice gradient background */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card Container */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  /* Slight transparency */
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  /* Softer, deeper shadow */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* Subtle lift effect */
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #2d3748;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.search-bar input:focus {
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-bar button {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-bar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.search-bar button:active {
+  transform: translateY(0);
+}
+
+/* Loading & Error */
+.loading {
+  color: #667eea;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.error {
+  color: #e53e3e;
+  background-color: #fff5f5;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #fed7d7;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Weather Info */
+.weather-card {
+  margin-top: 30px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-card h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.weather-info {
+  margin: 25px 0;
+}
+
+.temp {
+  font-size: 64px;
+  font-weight: 800;
+  color: #2d3748;
+  line-height: 1;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(#667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  font-size: 20px;
+  color: #718096;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  background-color: #f7fafc;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-item span:first-child {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.detail-item span:last-child {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4a5568;
+}
