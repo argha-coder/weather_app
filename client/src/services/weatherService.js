@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "https://weather-app-1-xsv9.onrender.com/api/weather";
+const API_URL = "https://weather-app-2-uswg.onrender.com/api/weather";
 
 export const getWeather = async (city) => {
     try {
