@@ -27,6 +27,9 @@ function App() {
   return (
     <div className="app-container">
       <div className="card">
+        <div className="app-icon">
+          <img src="/icon.png" alt="Weather App Icon" />
+        </div>
         <h1>Weather App</h1>
         <SearchBar onSearch={fetchWeather} />
 
